@@ -43,6 +43,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	private List<ActionItem> actionItems = new ArrayList<ActionItem>();
 	
 	private boolean mDidAction;
+	private View mLastAnchor;
 	
 	private int mChildPos;
     private int mInsertPos;
@@ -228,7 +229,8 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 		mDidAction 			= false;
 		
 		int[] location 		= new int[2];
-	
+		mLastAnchor = anchor;
+		
 		anchor.getLocationOnScreen(location);
 
 		Rect anchorRect 	= new Rect(location[0], location[1], location[0] + anchor.getWidth(), location[1] 
@@ -291,6 +293,15 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 		setAnimationStyle(screenWidth, anchorRect.centerX(), onTop);
 		
 		mWindow.showAtLocation(anchor, Gravity.NO_GRAVITY, xPos, yPos);
+	}
+	
+	/**
+	 * Get Last Anchor View
+	 * 
+	 * @return The view to which a Quick Action dialog was last anchored to.
+	 */
+	public View getLastAnchorView(){
+		return mLastAnchor;
 	}
 	
 	/**
