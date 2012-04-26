@@ -26,6 +26,8 @@ import android.widget.TextView;
  * 
  * Contributors:
  * - Kevin Peck <kevinwpeck@gmail.com>
+ * - Alexandros Schillings https://github.com/alt236
+ * 
  */
 public class QuickAction extends PopupWindows implements OnDismissListener {
 	private View mRootView;

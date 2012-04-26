@@ -10,7 +10,7 @@ import android.graphics.drawable.Drawable;
  * 
  * Contributors:
  * - Kevin Peck <kevinwpeck@gmail.com>
- *
+ * - Alexandros Schillings https://github.com/alt236
  */
 public class ActionItem {
 	private Drawable icon;

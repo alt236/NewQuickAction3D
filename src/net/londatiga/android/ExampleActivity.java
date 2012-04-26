@@ -16,6 +16,7 @@ import android.widget.Toast;
  * 
  * Contributors:
  * - Kevin Peck <kevinwpeck@gmail.com>
+ * - Alexandros Schillings https://github.com/alt236
  * 
  */
 public class ExampleActivity extends Activity {
