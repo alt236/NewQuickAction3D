@@ -2,10 +2,8 @@ package net.londatiga.android;
 
 import android.app.Activity;
 import android.os.Bundle;
-
 import android.view.View;
 import android.view.View.OnClickListener;
-
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -48,21 +46,30 @@ public class ExampleActivity extends Activity {
 		
 		//create QuickAction. Use QuickAction.VERTICAL or QuickAction.HORIZONTAL param to define layout 
         //orientation
-		final QuickAction quickAction = new QuickAction(this, QuickAction.VERTICAL);
+        
+		final QuickAction quickVerticalAction = new QuickAction(this, QuickAction.VERTICAL);
+		final QuickAction quickHorizontalAction = new QuickAction(this, QuickAction.HORIZONTAL);
 		
 		//add action items into QuickAction
-        quickAction.addActionItem(nextItem);
-		quickAction.addActionItem(prevItem);
-        quickAction.addActionItem(searchItem);
-        quickAction.addActionItem(infoItem);
-        quickAction.addActionItem(eraseItem);
-        quickAction.addActionItem(okItem);
+		quickVerticalAction.addActionItem(nextItem);
+        quickVerticalAction.addActionItem(prevItem);
+        quickVerticalAction.addActionItem(searchItem);
+        quickVerticalAction.addActionItem(infoItem);
+        quickVerticalAction.addActionItem(eraseItem);
+        quickVerticalAction.addActionItem(okItem);
         
+        quickHorizontalAction.addActionItem(nextItem);
+        quickHorizontalAction.addActionItem(prevItem);
+        quickHorizontalAction.addActionItem(searchItem);
+        quickHorizontalAction.addActionItem(infoItem);
+        quickHorizontalAction.addActionItem(eraseItem);
+        quickHorizontalAction.addActionItem(okItem);
+
         //Set listener for action item clicked
-		quickAction.setOnActionItemClickListener(new QuickAction.OnActionItemClickListener() {			
+        quickVerticalAction.setOnActionItemClickListener(new QuickAction.OnActionItemClickListener() {			
 			@Override
 			public void onItemClick(QuickAction source, int pos, int actionId) {				
-				ActionItem actionItem = quickAction.getActionItem(pos);
+				ActionItem actionItem = quickVerticalAction.getActionItem(pos);
                  
 				//here we can filter which action item was clicked with pos or actionId parameter
 				if (actionId == ID_SEARCH) {
@@ -70,14 +77,41 @@ public class ExampleActivity extends Activity {
 				} else if (actionId == ID_INFO) {
 					Toast.makeText(getApplicationContext(), "I have no info this time", Toast.LENGTH_SHORT).show();
 				} else {
-					Toast.makeText(getApplicationContext(), actionItem.getTitle() + " selected", Toast.LENGTH_SHORT).show();
+					String tag = (String) source.getLastAnchorView().getTag();
+					if(tag==null){
+						Toast.makeText(getApplicationContext(), actionItem.getTitle() + " selected", Toast.LENGTH_SHORT).show();
+					} else {
+						Toast.makeText(getApplicationContext(), actionItem.getTitle() + " selected and view's Tag is '" + tag + "'", Toast.LENGTH_SHORT).show();
+					}
 				}
 			}
 		});
 		
+        
+        quickHorizontalAction.setOnActionItemClickListener(new QuickAction.OnActionItemClickListener() {			
+			@Override
+			public void onItemClick(QuickAction source, int pos, int actionId) {				
+				ActionItem actionItem = quickVerticalAction.getActionItem(pos);
+                 
+				//here we can filter which action item was clicked with pos or actionId parameter
+				if (actionId == ID_SEARCH) {
+					Toast.makeText(getApplicationContext(), "Let's do some search action", Toast.LENGTH_SHORT).show();
+				} else if (actionId == ID_INFO) {
+					Toast.makeText(getApplicationContext(), "I have no info this time", Toast.LENGTH_SHORT).show();
+				} else {
+					String tag = (String) source.getLastAnchorView().getTag();
+					if(tag==null){
+						Toast.makeText(getApplicationContext(), actionItem.getTitle() + " selected", Toast.LENGTH_SHORT).show();
+					} else {
+						Toast.makeText(getApplicationContext(), actionItem.getTitle() + " selected and view's Tag is '" + tag + "'", Toast.LENGTH_SHORT).show();
+					}
+				}
+			}
+		});
+        
 		//set listnener for on dismiss event, this listener will be called only if QuickAction dialog was dismissed
 		//by clicking the area outside the dialog.
-		quickAction.setOnDismissListener(new QuickAction.OnDismissListener() {			
+        quickVerticalAction.setOnDismissListener(new QuickAction.OnDismissListener() {			
 			@Override
 			public void onDismiss() {
 				Toast.makeText(getApplicationContext(), "Dismissed", Toast.LENGTH_SHORT).show();
@@ -89,7 +123,7 @@ public class ExampleActivity extends Activity {
 		btn1.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				quickAction.show(v);
+				quickVerticalAction.show(v);
 			}
 		});
 
@@ -97,7 +131,7 @@ public class ExampleActivity extends Activity {
 		btn2.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				quickAction.show(v);
+				quickVerticalAction.show(v);
 			}
 		});
 		
@@ -105,8 +139,33 @@ public class ExampleActivity extends Activity {
 		btn3.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				quickAction.show(v);
-				quickAction.setAnimStyle(QuickAction.ANIM_REFLECT);
+				quickVerticalAction.show(v);
+				quickVerticalAction.setAnimStyle(QuickAction.ANIM_REFLECT);
+			}
+		});
+		
+		Button btn4 = (Button) this.findViewById(R.id.btn4);
+		btn4.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				quickVerticalAction.show(v);
+				quickVerticalAction.setAnimStyle(QuickAction.ANIM_REFLECT);
+			}
+		});
+		
+		Button btn5 = (Button) this.findViewById(R.id.btn5);
+		btn5.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				quickHorizontalAction.show(v);
+			}
+		});
+		
+		Button btn6 = (Button) this.findViewById(R.id.btn6);
+		btn6.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				quickHorizontalAction.show(v, getResources().getDrawable(R.drawable.icon), "Line1", "Line2");
 			}
 		});
 	}
