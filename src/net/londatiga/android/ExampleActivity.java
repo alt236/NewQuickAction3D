@@ -48,8 +48,8 @@ public class ExampleActivity extends Activity {
 		//create QuickAction. Use QuickAction.VERTICAL or QuickAction.HORIZONTAL param to define layout 
         //orientation
         
-		final QuickAction quickVerticalAction = new QuickAction(this, QuickAction.VERTICAL);
-		final QuickAction quickHorizontalAction = new QuickAction(this, QuickAction.HORIZONTAL);
+		final QuickAction quickVerticalAction = new QuickAction(this, QuickAction.ORIENTATION_VERTICAL, QuickAction.COLOUR_DARK);
+		final QuickAction quickHorizontalAction = new QuickAction(this, QuickAction.ORIENTATION_HORIZONTAL, QuickAction.COLOUR_DARK);
 		
 		//add action items into QuickAction
 		quickVerticalAction.addActionItem(nextItem);

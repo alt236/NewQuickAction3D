@@ -31,17 +31,21 @@ public final class R {
     public static final class drawable {
         public static int action_item_btn=0x7f020000;
         public static int action_item_selected=0x7f020001;
-        public static int arrow_down=0x7f020002;
-        public static int arrow_up=0x7f020003;
-        public static int icon=0x7f020004;
-        public static int menu_cancel=0x7f020005;
-        public static int menu_down_arrow=0x7f020006;
-        public static int menu_eraser=0x7f020007;
-        public static int menu_info=0x7f020008;
-        public static int menu_ok=0x7f020009;
-        public static int menu_search=0x7f02000a;
-        public static int menu_up_arrow=0x7f02000b;
-        public static int popup=0x7f02000c;
+        public static int action_item_selected_old=0x7f020002;
+        public static int arrow_down_dark=0x7f020003;
+        public static int arrow_down_light=0x7f020004;
+        public static int arrow_up_dark=0x7f020005;
+        public static int arrow_up_light=0x7f020006;
+        public static int icon=0x7f020007;
+        public static int menu_cancel=0x7f020008;
+        public static int menu_down_arrow=0x7f020009;
+        public static int menu_eraser=0x7f02000a;
+        public static int menu_info=0x7f02000b;
+        public static int menu_ok=0x7f02000c;
+        public static int menu_search=0x7f02000d;
+        public static int menu_up_arrow=0x7f02000e;
+        public static int popup_dark=0x7f02000f;
+        public static int popup_light=0x7f020010;
     }
     public static final class id {
         public static int arrow_down=0x7f070010;
