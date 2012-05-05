@@ -6,6 +6,7 @@ NewQuickAction3D is a small android library to create QuickAction dialog with Ga
 How to Use
 ==========
 This repo includes a sample Activity (__ExampleActivity.java__) to show how to use QuickAction.
+Keep in mind that as this is now an android library project, you will not be able to launch it directly.
 
 	public class ExampleActivity extends Activity {
 	//action id
