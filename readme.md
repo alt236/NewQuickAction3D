@@ -6,7 +6,7 @@ NewQuickAction3D is a small android library to create QuickAction dialog with Ga
 How to Use
 ==========
 This repo includes a sample Activity (__ExampleActivity.java__) to show how to use QuickAction.
-Keep in mind that as this is now an android library project, you will not be able to launch it directly.
+Keep in mind that as this is now an android library project, you will not be able to launch it directly unless you clear the "Is Library" flag from the settings.
 
 	public class ExampleActivity extends Activity {
 	//action id
@@ -37,8 +37,8 @@ Keep in mind that as this is now an android library project, you will not be abl
 		//create QuickAction. Use QuickAction.VERTICAL or QuickAction.HORIZONTAL param to define layout 
         //orientation
         
-		final QuickAction quickVerticalAction = new QuickAction(this, QuickAction.VERTICAL);
-		final QuickAction quickHorizontalAction = new QuickAction(this, QuickAction.HORIZONTAL);
+		final QuickAction quickVerticalAction = new QuickAction(this, QuickAction.ORIENTATION_VERTICAL, QuickAction.COLOUR_DARK);
+		final QuickAction quickHorizontalAction = new QuickAction(this, QuickAction.ORIENTATION_HORIZONTAL, QuickAction.COLOUR_DARK);
 		
 		//add action items into QuickAction
 		quickVerticalAction.addActionItem(nextItem);

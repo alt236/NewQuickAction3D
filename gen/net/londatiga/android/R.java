@@ -29,50 +29,50 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static int action_item_btn=0x7f020000;
-        public static int action_item_selected=0x7f020001;
-        public static int action_item_selected_old=0x7f020002;
-        public static int arrow_down_dark=0x7f020003;
-        public static int arrow_down_light=0x7f020004;
-        public static int arrow_up_dark=0x7f020005;
-        public static int arrow_up_light=0x7f020006;
-        public static int icon=0x7f020007;
-        public static int menu_cancel=0x7f020008;
-        public static int menu_down_arrow=0x7f020009;
-        public static int menu_eraser=0x7f02000a;
-        public static int menu_info=0x7f02000b;
-        public static int menu_ok=0x7f02000c;
-        public static int menu_search=0x7f02000d;
-        public static int menu_up_arrow=0x7f02000e;
-        public static int popup_dark=0x7f02000f;
-        public static int popup_light=0x7f020010;
+        public static int action_item_arrow_down_dark=0x7f020000;
+        public static int action_item_arrow_down_light=0x7f020001;
+        public static int action_item_arrow_up_dark=0x7f020002;
+        public static int action_item_arrow_up_light=0x7f020003;
+        public static int action_item_btn=0x7f020004;
+        public static int action_item_popup_dark=0x7f020005;
+        public static int action_item_popup_light=0x7f020006;
+        public static int action_item_selected=0x7f020007;
+        public static int action_item_selected_old=0x7f020008;
+        public static int icon=0x7f020009;
+        public static int menu_cancel=0x7f02000a;
+        public static int menu_down_arrow=0x7f02000b;
+        public static int menu_eraser=0x7f02000c;
+        public static int menu_info=0x7f02000d;
+        public static int menu_ok=0x7f02000e;
+        public static int menu_search=0x7f02000f;
+        public static int menu_up_arrow=0x7f020010;
     }
     public static final class id {
-        public static int arrow_down=0x7f070010;
-        public static int arrow_up=0x7f07000f;
-        public static int btn1=0x7f070002;
-        public static int btn2=0x7f070003;
-        public static int btn3=0x7f070004;
-        public static int btn4=0x7f070005;
-        public static int btn5=0x7f070006;
-        public static int btn6=0x7f070007;
-        public static int content=0x7f070008;
-        public static int image=0x7f07000a;
-        public static int info=0x7f070009;
+        public static int arrow_down=0x7f07000a;
+        public static int arrow_up=0x7f070009;
+        public static int btn1=0x7f07000b;
+        public static int btn2=0x7f07000c;
+        public static int btn3=0x7f07000d;
+        public static int btn4=0x7f07000e;
+        public static int btn5=0x7f07000f;
+        public static int btn6=0x7f070010;
+        public static int content=0x7f070002;
+        public static int image=0x7f070004;
+        public static int info=0x7f070003;
         public static int iv_icon=0x7f070000;
-        public static int line1=0x7f07000b;
-        public static int line2=0x7f07000c;
-        public static int scroller=0x7f07000d;
-        public static int tracks=0x7f07000e;
+        public static int line1=0x7f070005;
+        public static int line2=0x7f070006;
+        public static int scroller=0x7f070007;
+        public static int tracks=0x7f070008;
         public static int tv_title=0x7f070001;
     }
     public static final class layout {
         public static int action_item_horizontal=0x7f030000;
-        public static int action_item_vertical=0x7f030001;
-        public static int horiz_separator=0x7f030002;
-        public static int main=0x7f030003;
-        public static int popup_horizontal=0x7f030004;
-        public static int popup_vertical=0x7f030005;
+        public static int action_item_popup_horizontal=0x7f030001;
+        public static int action_item_popup_vertical=0x7f030002;
+        public static int action_item_vertical=0x7f030003;
+        public static int horiz_separator=0x7f030004;
+        public static int main=0x7f030005;
     }
     public static final class string {
         public static int app_name=0x7f050001;

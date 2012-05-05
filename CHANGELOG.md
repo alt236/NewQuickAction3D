@@ -1,6 +1,14 @@
 Change Log
 ===============================================================================
 
+Version 1.1.0 *(WIP)*
+---------------------------
+* The project is now an Android library
+* Added additional fields in Horizontal mode (Two TextViews and an ImageView)
+* Added Light color version
+* Updated/Added necessary resources
+* Renamed resources to allow easy overriding by projects using the library
+
 Version 1.0.1 *(2011-10-16)*
 ---------------------------
 * Improve sample code *(ExampleActivity.java)*

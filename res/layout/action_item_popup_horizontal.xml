@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dip"
-        android:background="@drawable/popup_light"
+        android:background="@drawable/action_item_popup_light"
         android:orientation="vertical" >
 
         <LinearLayout
@@ -64,7 +64,7 @@
         android:id="@+id/arrow_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/arrow_up_light" />
+        android:src="@drawable/action_item_arrow_up_light" />
 
     <ImageView
         android:id="@+id/arrow_down"
@@ -72,6 +72,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/content"
         android:layout_marginTop="-4dip"
-        android:src="@drawable/arrow_down_light" />
+        android:src="@drawable/action_item_arrow_down_light" />
 
 </RelativeLayout>

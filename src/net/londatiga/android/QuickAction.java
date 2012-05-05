@@ -92,9 +92,9 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 		mInflater 	 = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
 		if (mOrientation == ORIENTATION_HORIZONTAL) {
-			setRootViewId(R.layout.popup_horizontal);
+			setRootViewId(R.layout.action_item_popup_horizontal);
 		} else {
-			setRootViewId(R.layout.popup_vertical);
+			setRootViewId(R.layout.action_item_popup_vertical);
 		}
 
 		mAnimStyle 	= ANIM_AUTO;
@@ -125,7 +125,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 		mArrowUp 	= (ImageView) mRootView.findViewById(R.id.arrow_up);
 		mScroller	= mRootView.findViewById(R.id.scroller);
 
-		if(mRootViewId == R.layout.popup_horizontal){
+		if(mRootViewId == R.layout.action_item_popup_horizontal){
 			mLine1      = (TextView) mRootView.findViewById(R.id.line1);
 			mLine2      = (TextView) mRootView.findViewById(R.id.line2);
 			mImage      = (ImageView) mRootView.findViewById(R.id.image);
@@ -250,7 +250,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 		//Log.d(Constants.TAG, "^ mRootViewId: " +  mRootViewId);
 		//Log.d(Constants.TAG, "^ Horiz      : " +  R.layout.quickaction_popup_horizontal );
 		
-		if(mRootViewId == R.layout.popup_horizontal){
+		if(mRootViewId == R.layout.action_item_popup_horizontal){
 			if(d == null){
 				mImage.setVisibility(View.GONE);
 			} else {
@@ -282,7 +282,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 				mRootView.findViewById(R.id.info).setVisibility(View.VISIBLE);
 			}
 		}
-		else if (mRootViewId == R.layout.popup_vertical){
+		else if (mRootViewId == R.layout.action_item_popup_vertical){
 
 		}
 	}
@@ -293,13 +293,13 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 		}
 		
 		if(mColour == COLOUR_DARK){
-			view.setBackgroundResource(R.drawable.popup_dark);
-			mArrowUp.setImageResource(R.drawable.arrow_up_dark);
-			mArrowDown.setImageResource(R.drawable.arrow_down_dark);
+			view.setBackgroundResource(R.drawable.action_item_popup_dark);
+			mArrowUp.setImageResource(R.drawable.action_item_arrow_up_dark);
+			mArrowDown.setImageResource(R.drawable.action_item_arrow_down_dark);
 		}else if (mColour == COLOUR_LIGHT){
-			view.setBackgroundResource(R.drawable.popup_light);
-			mArrowUp.setImageResource(R.drawable.arrow_up_light);
-			mArrowDown.setImageResource(R.drawable.arrow_down_light);
+			view.setBackgroundResource(R.drawable.action_item_popup_light);
+			mArrowUp.setImageResource(R.drawable.action_item_arrow_up_light);
+			mArrowDown.setImageResource(R.drawable.action_item_arrow_down_light);
 		}
 	}
 	private void coloriseTextView(TextView tv){
