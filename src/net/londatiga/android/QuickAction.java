@@ -215,7 +215,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 		container.setClickable(true);
 
 		if (mOrientation == ORIENTATION_HORIZONTAL && mChildPos != 0) {
-			View separator = mInflater.inflate(R.layout.horiz_separator, null);
+			View separator = mInflater.inflate(R.layout.action_horiz_separator, null);
 
 			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.FILL_PARENT);
 

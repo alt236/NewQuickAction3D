@@ -67,11 +67,11 @@ public final class R {
         public static int tv_title=0x7f070001;
     }
     public static final class layout {
-        public static int action_item_horizontal=0x7f030000;
-        public static int action_item_popup_horizontal=0x7f030001;
-        public static int action_item_popup_vertical=0x7f030002;
-        public static int action_item_vertical=0x7f030003;
-        public static int horiz_separator=0x7f030004;
+        public static int action_horiz_separator=0x7f030000;
+        public static int action_item_horizontal=0x7f030001;
+        public static int action_item_popup_horizontal=0x7f030002;
+        public static int action_item_popup_vertical=0x7f030003;
+        public static int action_item_vertical=0x7f030004;
         public static int main=0x7f030005;
     }
     public static final class string {
